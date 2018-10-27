@@ -1,6 +1,6 @@
 // GetBigTypicallyTrueRandomNumber.js
 // Invokes an 8-bit random number generator at intervals to piece together
-// a bigger random number.
+// a bigger random number (64 bits in this example).
 // Copyright 2018 Zettalocity Software.
 
 // This value represents the number of random bits to be generated.
