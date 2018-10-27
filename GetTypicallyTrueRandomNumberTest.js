@@ -43,14 +43,6 @@ function GetTimings()
 	return;
 }
 
-// Test runner.
-//
-function RunTestsUntilStopped()
-{
-
-	return;
-}
-
 // Resets the DOM elements that may have been updated via the above code.
 //
 function ClearForm()
@@ -67,6 +59,8 @@ function StopTestRunner()
 {
 	// Shut down the calls to the random number generator routines.
 	clearInterval(nInterval);
+	$("starttestrun").disabled = false;
+	$("stoptestrun").disabled = true;
 
 	// Show the timing results.
 	$("time1").firstChild.nodeValue = "GetTypicallyTrueRandomNumber: " + tt_cumulative.toFixed(2) + " ms";
@@ -80,11 +74,13 @@ function StopTestRunner()
 function StartTestRunner()
 {
 	ClearForm();
+	$("starttestrun").disabled = true;
+	$("stoptestrun").disabled = false;
 	$("time1").innerHTML = " &nbsp; &mdash; Running &mdash; &nbsp; ";
-	
+
 	// Reset global values that store performance comparison results.
 	tt_cumulative = tp_cumulative = 0;
-	
+
 	// Accumulate the timings.  Kick off the random number generator routines 
 	// with delays, to randomize the launch times some.
 	nInterval = setInterval(GetTimings, 2000);
@@ -97,5 +93,6 @@ window.onload = function()
 {
 	$("starttestrun").onclick = StartTestRunner;
 	$("stoptestrun").onclick = StopTestRunner;
+	$("stoptestrun").disabled = true;
 	return;
 }

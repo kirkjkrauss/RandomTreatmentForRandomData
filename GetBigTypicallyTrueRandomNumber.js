@@ -46,7 +46,7 @@ function AccumlateRandomBits()
 		clearInterval(g_objInterval);
 		document.body.dispatchEvent(g_eventDone);		
 	}
-	
+
 	return;
 }
 
@@ -58,6 +58,10 @@ function GetBigTypicallyTrueRandomNumber()
 	// the placeholder maintained during the run.
 	g_strRandomNumberInHex = "";
 	g_iRandomBitsInString = 0;
+
+	// Disable the button that kicked off random number generation, until 
+	// we're done generating one.
+	$("getrandomnumber").disabled = true;	
 
 	// Let 'em know we're going to take our time.
 	$("randomnumber").innerHTML = " &mdash; Running &mdash; ";
@@ -75,6 +79,9 @@ function DisplayRandomNumber()
 	// Display the big random number.
 	let iRandomNumber = parseInt(g_strRandomNumberInHex, 16);
 	$("randomnumber").firstChild.nodeValue = iRandomNumber + " (0x" + g_strRandomNumberInHex +")";
+
+	// Done with random number generation.  Enable the button again.
+	$("getrandomnumber").disabled = false;	
 	return;
 }
 
