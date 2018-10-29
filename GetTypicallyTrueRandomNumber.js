@@ -7,9 +7,9 @@
 // on the timing resolution of performance.now(), which involves such factors 
 // as browser security settings and overall timer resolution constraints.  
 //
-var g_iPM88_Const = 16807; // Full-period multiplier (7 to the 5th)
-var g_iSeed = 0;           // Stores last computed random number between calls
-var g_iBitness = 0xff;     // Can add 1 or 2 f's to get 12- or 16-bit results
+const g_iPM88_Const = 16807; // Full-period multiplier (7 to the 5th)
+const g_iBitness = 0xff;     // Can add 1 or 2 f's to get 12- or 16-bit output
+var g_iSeed = 0;             // Stores last computed random number between calls
  
 function GetTypicallyTrueRandomNumber()
 {
