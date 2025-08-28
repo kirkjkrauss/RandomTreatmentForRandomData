@@ -1,5 +1,5 @@
 # RandomTreatmentForRandomData
-A small, fast, mostly true random number generator routine, with both native code and JavaScript implementations
+A small, fast, mostly true random number generator routine, with both C/C++ native code and JavaScript implementations
 
 Unlike typical methods, this random number generator algorithm gives you a different set of numbers every time it&rsquo;s used in a run without requiring a new &ldquo;seed&rdquo; value.  The native code version that appears here is much faster than typical C standard library implementations.  A JavaScript&reg; version appears here, too.
 
