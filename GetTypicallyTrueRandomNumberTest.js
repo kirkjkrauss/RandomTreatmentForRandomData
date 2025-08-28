@@ -87,10 +87,21 @@ function StartTestRunner()
 	return;
 }
 
+// Displays a random number.
+//
+function GetRandomNumber()
+{
+	$("randomnumber").innerHTML = 
+	    "GetTypicallyTrueRandomNumber returned: 0x" + 
+		    GetTypicallyTrueRandomNumber().toString(16);
+	return;
+}
+
 // Entry point.
 //
 window.onload = function()
 {
+	$("getrandomnumber").onclick = GetRandomNumber;
 	$("starttestrun").onclick = StartTestRunner;
 	$("stoptestrun").onclick = StopTestRunner;
 	$("stoptestrun").disabled = true;

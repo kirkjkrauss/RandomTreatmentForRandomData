@@ -20,6 +20,18 @@ textarea
 	border: none;
 }
 
+#getrandomnumber
+{
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial';
+	font-weight: 200;
+	font-size: 11pt;
+	cursor: pointer;
+	position: relative;
+	top: 8px;
+	left: 20px;
+	text-align: center;
+}
+
 #starttestrun
 {
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial';

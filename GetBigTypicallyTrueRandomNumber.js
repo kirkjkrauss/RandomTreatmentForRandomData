@@ -1,10 +1,10 @@
 // GetBigTypicallyTrueRandomNumber.js
-// Invokes an 8-bit random number generator at intervals to piece together
+// Invokes a 12-bit random number generator at intervals to piece together
 // a bigger random number.
-// Copyright 2018 Zettalocity Software.
+// Copyright 2018, 2025 Zettalocity Software.
 
 // This value represents the number of random bits to be generated.
-const g_iRandomBits = 64;
+const g_iRandomBits = 72;
 
 // This string contains the concatenated 8-bit results of multiple calls to 
 // GetTypicallyTrueRandomNumber().
@@ -15,7 +15,7 @@ var g_strRandomNumberInHex;
 var g_iRandomBitsInString;
 
 // These next values represent a one second interval for timing calls to the 
-// 8-bit routine.  You can tweak the timing by adjusting the first value here.
+// 12-bit routine.  You can tweak the timing by adjusting the first value here.
 //
 const g_iIntervalMs = 1000;
 var g_objInterval;
@@ -37,7 +37,7 @@ function AccumlateRandomBits()
 {
 	if (g_iRandomBitsInString < g_iRandomBits)
 	{
-		g_iRandomBitsInString += 8;
+		g_iRandomBitsInString += 12;
 		g_strRandomNumberInHex += GetTypicallyTrueRandomNumber().toString(16);
 	}
 	else
