@@ -92,7 +92,7 @@ function StartTestRunner()
 function GetRandomNumber()
 {
 	$("randomnumber").innerHTML = 
-	    "GetTypicallyTrueRandomNumber returned: 0x" + 
+	    "GetTypicallyTrueRandomNumber() returned: 0x" + 
 		    GetTypicallyTrueRandomNumber().toString(16);
 	return;
 }
